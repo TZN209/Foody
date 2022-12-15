@@ -129,7 +129,7 @@ exports.forgotPassword = async (req, res) => {
         from: 'securty@gmail.com',
         to: user.email,
         subject: 'Password Reset',
-        html: generatePasswordResetTemplate(`http://localhost:3000/reset-password?token=${token}&id=${user._id}`),
+        html: generatePasswordResetTemplate(`http://localhost:3000/reset-password?token=${randomBytes}&id=${user._id}`),
     });
 
     res.json({
