@@ -5,17 +5,17 @@ exports.validateUser = [
         .trim()
         .not()
         .isEmpty()
-        .withMessage('Name is missing!')
+        .withMessage('Tên bị thiếu!')
         .isLength({ min: 3, max: 20 })
-        .withMessage('Invalid name, name must be 3 to 20 charaters long!'),
-    check('email').normalizeEmail().isEmail().withMessage('Invalid email!'),
+        .withMessage('Tên không hợp lệ, tên phải dài từ 3 đến 20 ký tự!'),
+    check('email').normalizeEmail().isEmail().withMessage('Email không hợp lệ!'),
     check('password')
         .trim()
         .not()
         .isEmpty()
-        .withMessage('Password is empty!')
+        .withMessage('Mật khẩu trống!')
         .isLength({ min: 8, max: 20 })
-        .withMessage('Password must be 8 to 20 characters long!'),
+        .withMessage('Mật khẩu phải dài từ 8 đến 20 ký tự!'),
 ];
 
 exports.validate = (req, res, next) => {

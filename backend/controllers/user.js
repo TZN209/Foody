@@ -18,7 +18,7 @@ const { isValidObjectId } = require('mongoose');
 exports.createUser = async (req, res) => {
     const { name, email, password } = req.body;
     const user = await User.findOne({ email });
-    if (user) return sendError(res, 'This email is alrealy exists!');
+    if (user) return sendError(res, 'Email này đã tồn tại!');
 
     const newUser = new User({
         name,
@@ -38,7 +38,7 @@ exports.createUser = async (req, res) => {
     mailTransport().sendMail({
         from: 'emailverification@gmail.com',
         to: newUser.email,
-        subject: 'Verify your email account',
+        subject: 'Xác minh tài khoản email của bạn',
         html: generateEmailTemplate(OTP),
     });
 
@@ -56,13 +56,13 @@ exports.createUser = async (req, res) => {
 exports.signin = async (req, res) => {
     try {
         const { email, password } = req.body;
-        if (!email.trim() || !password.trim()) return sendError(res, 'email/password missing!');
+        if (!email.trim() || !password.trim()) return sendError(res, 'email hoặc mật khẩu bị thiếu!');
 
         const user = await User.findOne({ email });
-        if (!user) return sendError(res, 'User not found!');
+        if (!user) return sendError(res, 'Không tìm thấy người dùng!');
 
         const isMatched = await user.comparePassword(password);
-        if (!isMatched) return sendError(res, 'email/password does not match!');
+        if (!isMatched) return sendError(res, 'email hoặc mật khẩu không khớp!');
 
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
             expiresIn: '1d',
@@ -79,20 +79,20 @@ exports.signin = async (req, res) => {
 
 exports.verifyEmail = async (req, res) => {
     const { userId, otp } = req.body;
-    if (!userId || !otp.trim()) return sendError(res, 'Invalid request, missing parameters!');
+    if (!userId || !otp.trim()) return sendError(res, 'Yêu cầu không hợp lệ, thiếu tham số!');
 
-    if (!isValidObjectId(userId)) return sendError(res, 'Invalid user Id!');
+    if (!isValidObjectId(userId)) return sendError(res, 'ID người dùng không hợp lệ!');
 
     const user = await User.findById(userId);
-    if (!user) return sendError(res, 'Sorry, user not found!');
+    if (!user) return sendError(res, 'Xin lỗi, không tìm thấy người dùng!');
 
-    if (user.verified) return sendError(res, 'This account is already verified!');
+    if (user.verified) return sendError(res, 'Tài khoản này đã được xác minh!');
 
     const token = await VerificationToken.findOne({ owner: user._id });
-    if (!token) return sendError(res, 'Sorry, user not found!');
+    if (!token) return sendError(res, 'Xin lỗi, không tìm thấy người dùng!');
 
     const isMatched = await token.compareToken(otp);
-    if (!isMatched) return sendError(res, 'Please provide a valid token!');
+    if (!isMatched) return sendError(res, 'Vui lòng cung cấp otp hợp lệ!');
 
     user.verified = true;
     await VerificationToken.findByIdAndDelete(token._id);
@@ -101,25 +101,25 @@ exports.verifyEmail = async (req, res) => {
     mailTransport().sendMail({
         from: 'emailverification@gmail.com',
         to: user.email,
-        subject: 'Welcome email',
-        html: plainEmailTemplate('Email Verified Sucessfully', 'Thanks for connecting with us'),
+        subject: 'Thư chào mừng',
+        html: plainEmailTemplate('Email đã xác minh thành công!', 'Cảm ơn để kết nối với chúng tôi!!!'),
     });
     res.json({
         success: true,
-        message: 'your email is verified.',
+        message: 'email của bạn đã được xác minh.',
         user: { name: user.name, email: user.email, id: user._id },
     });
 };
 
 exports.forgotPassword = async (req, res) => {
     const { email } = req.body;
-    if (!email) return sendError(res, 'Please provide a vilid email!');
+    if (!email) return sendError(res, 'Vui lòng cung cấp một email hợp lệ!');
 
     const user = await User.findOne({ email });
-    if (!user) return sendError(res, 'User not found, invalid request!');
+    if (!user) return sendError(res, 'Không tìm thấy người dùng, yêu cầu không hợp lệ!');
 
     const token = await ResetToken.findOne({ owner: user._id });
-    if (token) return sendError(res, 'Only after one hour you can request for another token!');
+    if (token) return sendError(res, 'Chỉ sau một giờ, bạn mới có thể yêu cầu mã thông báo khác!');
 
     const randomBytes = await createRandomBytes();
     const resetToken = new ResetToken({ owner: user._id, token: randomBytes });
@@ -128,13 +128,13 @@ exports.forgotPassword = async (req, res) => {
     mailTransport().sendMail({
         from: 'securty@gmail.com',
         to: user.email,
-        subject: 'Password Reset',
+        subject: 'Đặt lại mật khẩu',
         html: generatePasswordResetTemplate(`http://localhost:3000/reset-password?token=${randomBytes}&id=${user._id}`),
     });
 
     res.json({
         success: true,
-        message: 'Password reset link is sent to your email.',
+        message: 'Liên kết đặt lại mật khẩu được gửi đến email của bạn.',
     });
 };
 
@@ -142,13 +142,13 @@ exports.resetPassword = async (req, res) => {
     const { password } = req.body;
 
     const user = await User.findById(req.user._id);
-    if (!user) return sendError(res, 'user not found!');
+    if (!user) return sendError(res, 'người dùng không tìm thấy!');
 
     const isSamePassword = await user.comparePassword(password);
-    if (isSamePassword) return sendError(res, 'New password must be the different!');
+    if (isSamePassword) return sendError(res, 'Mật khẩu mới phải khác mật khẩu cũ!');
 
     if (password.trim().length < 8 || password.trim().length > 20)
-        return sendError(res, 'Password must be 8 to 20 characters long!');
+        return sendError(res, 'Mật khẩu phải dài từ 8 đến 20 ký tự!');
 
     user.password = password.trim();
     await user.save();
@@ -158,9 +158,9 @@ exports.resetPassword = async (req, res) => {
     mailTransport().sendMail({
         from: 'securty@gmail.com',
         to: user.email,
-        subject: 'Password Reset Successfully',
-        html: plainEmailTemplate('Password Reset Successfully', 'Now you can login with new password!'),
+        subject: 'Đặt lại mật khẩu thành công',
+        html: plainEmailTemplate('Đặt lại mật khẩu thành công', 'Bây giờ bạn có thể đăng nhập bằng mật khẩu mới!'),
     });
 
-    res.json({ success: true, message: 'Password Reset Successfully' });
+    res.json({ success: true, message: 'Đặt lại mật khẩu thành công' });
 };

@@ -59,7 +59,7 @@ const Verification = ({ route, navigation }) => {
 
     return (
         <KeyboardAvoidingView style={styles.container}>
-            <Text style={styles.heading}> Please verify your, PIN has been sent to your email.</Text>
+            <Text style={styles.heading}> Vui lòng xác minh, mã PIN đã được gửi đến email của bạn.</Text>
             <View style={styles.otpContainer}>
                 {inputs.map((inp, index) => {
                     return (

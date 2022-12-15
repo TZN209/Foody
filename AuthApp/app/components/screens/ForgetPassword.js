@@ -1,4 +1,4 @@
-import { useNavigation } from '@react-navigation/native';
+import { StackActions, useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { navigateToLogin, navigateToSignup, updateNotification } from '../../utils/helper';
@@ -17,7 +17,7 @@ const initialValues = {
 };
 
 const validationSchema = yup.object({
-    email: yup.string().email('Invalid email!').required('Email is missing!'),
+    email: yup.string().email('Email không hợp lệ!').required('Email bị thiếu!'),
 });
 
 const ForgetPassword = () => {
@@ -34,6 +34,7 @@ const ForgetPassword = () => {
         if (!res.success) return updateNotification(setMessage, res.error);
         formikActions.resetForm();
         updateNotification(setMessage, res.message, 'success');
+        navigation.dispatch(StackActions.replace('Login', { profile: res.user }));
     };
     return (
         <>
@@ -45,12 +46,12 @@ const ForgetPassword = () => {
                     onSubmit={handleResetLink}
                 >
                     <AppInput name="email" placeholder="example@gmail.com" />
-                    <SubmitButton title="Send Link" />
+                    <SubmitButton title="Gửi đường dẫn" />
                     <FormNavigator
                         onLeftLinkPress={navigateToLogin(navigation)}
                         onRightLinkPress={navigateToSignup(navigation)}
-                        leftLinkText="Log in"
-                        rightLinkText="Sign up"
+                        leftLinkText="Đăng nhập"
+                        rightLinkText="Đăng ký"
                     />
                 </CustomFormik>
             </FormContainer>

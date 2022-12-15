@@ -47,10 +47,10 @@ export default function Form() {
         e.preventDefault();
         const { password, confirmPassword } = newPassword;
         if (password.trim().length < 8 || password.trim().length > 20) {
-            return setError('Password must be 9 to 20 characters long');
+            return setError('Mật khẩu phải dài từ 8 đến 20 ký tự');
         }
         if (password !== confirmPassword) {
-            return setError('Password does not match!');
+            return setError('Mật khẩu không hợp lệ!');
         }
 
         try {
@@ -90,34 +90,40 @@ export default function Form() {
     if (busy)
         return (
             <div className="max-w-screen-sm m-auto pt-40">
-                <h1 className="text-center text-3xl text-gray-500 mb-3">Wait for a moment verifying reset token</h1>
+                <h1 className="text-center text-3xl text-gray-500 mb-3">Vui lòng đợi trong giây lát</h1>
             </div>
         );
 
     return (
         <div className="max-w-screen-sm m-auto pt-40">
-            <h1 className="text-center text-3xl text-gray-500 mb-3">Reset Password</h1>
+            <h1 className="text-center text-3xl text-gray-500 mb-3">Đặt lại mật khẩu</h1>
             <form onSubmit={handleSubmit} className="shadow w-full rounded-lg p-10">
                 {error && <p className="text-center p-2 mb-3 bg-red-500 text-white">{error}</p>}
                 <div className="space-y-8">
-                    <input
-                        type="password"
-                        placeholder="********"
-                        name="password"
-                        onChange={handleOnChange}
-                        className="px-3 password-lg h-10 w-full border-gray-500 border-2 rounded"
-                    />
-                    <input
-                        type="password"
-                        placeholder="********"
-                        name="confirmPassword"
-                        onChange={handleOnChange}
-                        className="px-3 text-lg h-10 w-full border-gray-500 border-2 rounded"
-                    />
+                    <div>
+                        <h4>Mật khẩu mới</h4>
+                        <input
+                            type="password"
+                            placeholder="********"
+                            name="password"
+                            onChange={handleOnChange}
+                            className="px-3 password-lg h-10 w-full border-gray-500 border-2 rounded"
+                        />
+                    </div>
+                    <div>
+                        <h4>Xác nhận mật khẩu</h4>
+                        <input
+                            type="password"
+                            placeholder="********"
+                            name="confirmPassword"
+                            onChange={handleOnChange}
+                            className="px-3 text-lg h-10 w-full border-gray-500 border-2 rounded"
+                        />
+                    </div>
                     <input
                         type="submit"
-                        value="Reset Password"
-                        className="bg-gray-500 w-full py-3 text-white rounded"
+                        value="Đặt lại mật khẩu"
+                        className="bg-orange-500 w-full py-3 text-white rounded"
                     />
                 </div>
             </form>

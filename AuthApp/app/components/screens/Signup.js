@@ -21,9 +21,9 @@ const initialValues = {
 };
 
 const validationSchema = yup.object({
-    name: yup.string().trim().required('Name is missing!'),
-    email: yup.string().email('Invalid email!').required('Email is missing!'),
-    password: yup.string().trim().min(8, 'Password is too short!').required('Password is missing!'),
+    name: yup.string().trim().required('Tên bị thiếu!'),
+    email: yup.string().email('Email không hợp lệ!').required('Email bị thiếu!'),
+    password: yup.string().trim().min(8, 'Mật khẩu quá ngắn!').required('Mật khẩu bị thiếu!'),
 });
 
 const Signup = () => {
@@ -47,15 +47,15 @@ const Signup = () => {
             {message.text ? <AppNotification type={message.type} text={message.text} /> : null}
             <FormContainer>
                 <CustomFormik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSignup}>
-                    <AppInput name="name" placeholder="John Doe" />
-                    <AppInput name="email" placeholder="example@gmail.com" />
+                    <AppInput name="name" placeholder="Nguyễn Văn A" />
+                    <AppInput name="email" placeholder="nguyenvanA@gmail.com" />
                     <AppInput secureTextEntry name="password" placeholder="********" />
-                    <SubmitButton title="Sign up" />
+                    <SubmitButton title="Đăng ký" />
                     <FormNavigator
                         onLeftLinkPress={navigateToLogin(navigation)}
                         onRightLinkPress={navigateToForgetPassword(navigation)}
-                        leftLinkText="Log in"
-                        rightLinkText="Forget password"
+                        leftLinkText="Đăng nhập"
+                        rightLinkText="Quên mật khẩu"
                     />
                 </CustomFormik>
             </FormContainer>

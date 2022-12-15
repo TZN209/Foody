@@ -5,5 +5,5 @@ mongoose
         useUnifiedTopology: true,
         // useCreateIndex: true,
     })
-    .then(() => console.log('out db is connected'))
+    .then(() => console.log('cơ sở dữ liệu đã được kết nối'))
     .catch((err) => console.log(err));
