@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-import { verifyEmail } from '../utils/auth';
+import { verifyEmail } from '../utils';
 
 const inputs = Array(4).fill('');
 let newInputIndex = 0;
