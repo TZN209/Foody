@@ -1,9 +1,9 @@
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import ForgetPassword from './app/components/screens/ForgetPassword';
-import Login from './app/components/screens/Login';
-import Signup from './app/components/screens/Signup';
-import Verification from './app/components/screens/Verification';
+import ForgetPassword from './app/screens/ForgetPassword';
+import Login from './app/screens/Login';
+import Signup from './app/screens/Signup';
+import Verification from './app/screens/Verification';
 import AuthNavigator from './app/navigation/AuthNavigator';
 
 const theme = {

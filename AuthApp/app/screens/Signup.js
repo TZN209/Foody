@@ -1,17 +1,17 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
-import { navigateToForgetPassword, navigateToLogin, updateNotification } from '../../utils/helper';
-import AppInput from '../AppInput';
-import FormContainer from '../FormContainer';
-import FormNavigator from '../FormNavigator';
-import SubmitButton from '../SubmitButton';
+import { navigateToForgetPassword, navigateToLogin, updateNotification } from '../utils/helper';
+import AppInput from '../components/AppInput';
+import FormContainer from '../components/FormContainer';
+import FormNavigator from '../components/FormNavigator';
+import SubmitButton from '../components/SubmitButton';
 
 import * as yup from 'yup';
-import CustomFormik from '../CustomFormik';
-import client from '../../api/client';
-import { signup } from '../../utils/auth';
-import AppNotification from '../AppNotification';
+import CustomFormik from '../components/CustomFormik';
+import client from '../api/client';
+import { signup } from '../utils/auth';
+import AppNotification from '../components/AppNotification';
 import { StackActions } from '@react-navigation/native';
 
 const initialValues = {

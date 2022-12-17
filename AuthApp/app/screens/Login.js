@@ -1,16 +1,16 @@
 import { StackActions, useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
-import { navigateToForgetPassword, navigateToSignup, updateNotification } from '../../utils/helper';
-import AppInput from '../AppInput';
-import CustomFormik from '../CustomFormik';
-import FormContainer from '../FormContainer';
-import FormNavigator from '../FormNavigator';
-import SubmitButton from '../SubmitButton';
+import { navigateToForgetPassword, navigateToSignup, updateNotification } from '../utils/helper';
+import AppInput from '../components/AppInput';
+import CustomFormik from '../components/CustomFormik';
+import FormContainer from '../components/FormContainer';
+import FormNavigator from '../components/FormNavigator';
+import SubmitButton from '../components/SubmitButton';
 
 import * as yup from 'yup';
-import { signin } from '../../utils/auth';
-import AppNotification from '../AppNotification';
+import { signin } from '../utils/auth';
+import AppNotification from '../components/AppNotification';
 
 const initialValues = {
     email: '',
