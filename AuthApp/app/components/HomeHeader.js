@@ -11,7 +11,7 @@ export default function HomeHeader({ navigation }) {
         <View style={styles.header}>
             {/* Menu Icon */}
             <View style={{ alignItems: 'center', justifyContent: 'center', marginLeft: 15 }}>
-            <Icon
+                <Icon
                     type="material-community"
                     name="menu"
                     color={colors.cardbackground}
@@ -30,7 +30,7 @@ export default function HomeHeader({ navigation }) {
 
             {/* Cart */}
             <View style={{ alignItems: 'center', justifyContent: 'center', marginRight: 15 }}>
-                <BadgeIcon type="material-community" name="cart" size={35} color={colors.cardbackground} />
+                <BadgeIcon type="material-community" name="cart" size={32} color={colors.cardbackground} />
             </View>
         </View>
     );

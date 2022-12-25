@@ -10,6 +10,7 @@ import {
     Pressable,
     Image,
     Dimensions,
+    StatusBar,
 } from 'react-native';
 import { Icon } from '@rneui/themed';
 import { colors } from '../global/styles';
@@ -23,6 +24,7 @@ export default function HomeScreen({ navigation }) {
     const [indexCheck, setIndexCheck] = useState('0');
     return (
         <View style={styles.container}>
+            <StatusBar translucent barStyle="light-content" backgroundColor="rgba(255, 140, 82,1)" />
             {/* Header */}
             <HomeHeader navigation={navigation} />
             <ScrollView stickyHeaderIndices={[0]} showsVerticalScrollIndicator={true}>
@@ -238,6 +240,7 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        paddingTop: 20,
     },
     deliveryButton: {
         paddingHorizontal: 20,

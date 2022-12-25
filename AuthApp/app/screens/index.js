@@ -8,6 +8,10 @@ import MyAccountScreen from './MyAccountScreen';
 import MyOrdersScreen from './MyOrdersScreen';
 import RestaurantMapScreen from './RestaurantsMapScreen';
 import SearchScreen from './SearchScreen';
+import SearchResultScreen from './SearchResultScreen';
+import MenuProductScreen from './MenuProductScreen';
+import RestaurantHomeScreen from './RestaurantHomeScreen';
+import MenuScreen from './MenuScreen';
 
 export {
     ForgetPassword,
@@ -20,4 +24,8 @@ export {
     MyOrdersScreen,
     RestaurantMapScreen,
     SearchScreen,
+    SearchResultScreen,
+    MenuProductScreen,
+    RestaurantHomeScreen,
+    MenuScreen,
 };

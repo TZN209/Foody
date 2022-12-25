@@ -8,6 +8,11 @@ import SubmitButton from './SubmitButton';
 import DrawerContent from './DrawerContent';
 import FoodCard from './FoodCard';
 import HomeHeader from './HomeHeader';
+import SearchComponent from './SearchComponent';
+import ProductCard from './ProductCard';
+import SearchResultCard from './SearchResultCard';
+import MenuCard from './MenuCard';
+import RestaurantHeader from './RestaurantHeader';
 
 export {
     AppInput,
@@ -20,4 +25,9 @@ export {
     DrawerContent,
     FoodCard,
     HomeHeader,
+    SearchComponent,
+    ProductCard,
+    SearchResultCard,
+    MenuCard,
+    RestaurantHeader,
 };

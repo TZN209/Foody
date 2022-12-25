@@ -13,7 +13,8 @@ export const colors = {
 };
 
 export const parameters = {
-    headerHeight: 40,
+    headerHeight: 60,
+
     styledButton: {
         backgroundColor: '#ff8c52',
         alignContent: 'center',
@@ -25,6 +26,7 @@ export const parameters = {
         paddingHorizontal: 20,
         width: '100%',
     },
+
     buttonTitle: {
         color: 'white',
         fontSize: 20,
@@ -34,8 +36,35 @@ export const parameters = {
         marginTop: -3,
     },
 };
+
 export const title = {
     color: '#ff8c52',
     fontSize: 20,
     fontWeight: 'bold',
+};
+
+export const fonts = {
+    ios: {
+        regular: 'System',
+        light: 'System',
+        lightItalic: 'System',
+        bold: 'System',
+        boldItalic: 'System',
+        black: 'System',
+        blackItalic: 'System',
+    },
+    android: {
+        regular: 'Roboto',
+        italic: 'Roboto-Italic',
+        thin: 'Roboto-Thin',
+        thinItalic: 'Roboto-ThinItalic',
+        light: 'Roboto-Light',
+        lightItalic: 'Roboto-LightItalic',
+        medium: 'Roboto-Medium',
+        mediumItalic: 'Roboto-MediumItalic',
+        bold: 'Roboto-Bold',
+        boldItalic: 'Roboto-BoldItalic',
+        condensed: 'RobotoCondensed-Regular',
+        condensedItalic: 'RobotoCondensed-Italic',
+    },
 };
