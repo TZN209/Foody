@@ -5,7 +5,7 @@ import { Icon, withBadge } from '@rneui/themed';
 import { colors, parameters } from '../global/styles';
 
 export default function HomeHeader({ navigation }) {
-    const BadgeIcon = withBadge(0)(Icon);
+    const BadgeIcon = withBadge(2)(Icon);
 
     return (
         <View style={styles.header}>
@@ -25,7 +25,7 @@ export default function HomeHeader({ navigation }) {
 
             {/* Title */}
             <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ color: colors.cardbackground, fontSize: 25, fontWeight: 'bold' }}>FoodDelivery</Text>
+                <Text style={{ color: colors.cardbackground, fontSize: 25, fontWeight: 'bold' }}> Fast Food </Text>
             </View>
 
             {/* Cart */}

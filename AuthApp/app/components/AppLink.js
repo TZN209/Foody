@@ -11,7 +11,7 @@ const AppLink = ({ text, onPress }) => {
 
 const styles = StyleSheet.create({
     link: {
-        color: '#8469cf',
+        color: '#000',
         fontSize: 16,
     },
 });

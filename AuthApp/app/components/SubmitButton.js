@@ -10,7 +10,7 @@ const SubmitButton = ({ title }) => {
             style={[
                 styles.submit,
                 {
-                    backgroundColor: isSubmitting ? 'gray' : '#8469cf',
+                    backgroundColor: isSubmitting ? '#fcd088' : '#ff8c52',
                 },
             ]}
         >

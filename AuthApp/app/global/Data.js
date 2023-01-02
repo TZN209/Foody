@@ -200,7 +200,7 @@ export const productData = [
         name: 'Big Mac',
         price: 70.2,
         image: 'https://images.pexels.com/photos/2271107/pexels-photo-2271107.jpeg',
-        details: 'McFeast features two 100% fresh beef burger patties that are hot',
+        details: 'McFeast giới thiệu 2 miếng burger bò tươi 100% nóng hổi',
         id: 4,
     },
     {
@@ -227,10 +227,10 @@ export const menuData = [
 ];
 
 export const specialData = [
-    { title: 'LIMITED OFFER', key: 0 },
-    { title: 'GO CHILLI', key: 1 },
-    { title: 'GO CHEESE', key: 2 },
-    { title: 'MCCHICKEN DELUXE PROMO', key: 3 },
+    { title: 'ƯU ĐÃI GIỚI HẠN', key: 0 },
+    { title: 'MIỄN PHÍ GIAO HÀNG', key: 1 },
+    { title: 'MUA 2 TẶNG 1', key: 2 },
+    { title: 'KHUYẾN MÃI LỚN', key: 3 },
 ];
 
 export const menu = [
@@ -249,13 +249,13 @@ export const menuDetailedData = [
         meal: 'Big Mac',
         price: 70.2,
         image: 'https://bukasapics.s3.us-east-2.amazonaws.com/plate1.png',
-        details: 'McFeast features two 100% fresh beef burger patties that are hot',
+        details: 'McFeast giới thiệu 2 miếng burger bò tươi 100% nóng hổi',
         preferenceTitle: [
-            'Choose your 2 dips',
-            'Choose your 1st drink flavour',
-            'Choose your 2nd drink flavour',
-            'Would you like to add a side?',
-            'Would you Like any extra sauce?',
+            'Chọn 2 món ăn của bạn',
+            'Chọn đồ uống đầu tiên của bạn',
+            'Chọn đồ uống thứ hai của bạn',
+            'Bạn có muốn thêm gia vị không?',
+            'Bạn có muốn thêm nước sốt không?',
         ],
         preferenceData: [
             [
@@ -315,13 +315,13 @@ export const menuDetailedData = [
         meal: 'Hand cut chips',
         price: 29.3,
         image: 'https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png',
-        details: 'Two 100% fresh beef burger patties that are hot,deliciously',
+        details: 'Hai miếng burger bò tươi 100% nóng hổi, thơm ngon',
         preferenceTitle: [
-            'Choose your 2 dips',
-            'Choose your 1st drink flavour',
-            'Choose your 2nd drink flavour',
-            'Would you like to add a side?',
-            'Would you Like any extra sauce?',
+            'Chọn 2 món ăn của bạn',
+            'Chọn đồ uống đầu tiên của bạn',
+            'Chọn đồ uống thứ hai của bạn',
+            'Bạn có muốn thêm gia vị không?',
+            'Bạn có muốn thêm nước sốt không?',
         ],
         preferenceData: [
             [
@@ -383,11 +383,11 @@ export const menuDetailedData = [
         image: 'https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png',
         details: '',
         preferenceTitle: [
-            'Choose your 2 dips',
-            'Choose your 1st drink flavour',
-            'Choose your 2nd drink flavour',
-            'Would you like to add a side?',
-            'Would you Like any extra sauce?',
+            'Chọn 2 món ăn của bạn',
+            'Chọn đồ uống đầu tiên của bạn',
+            'Chọn đồ uống thứ hai của bạn',
+            'Bạn có muốn thêm gia vị không?',
+            'Bạn có muốn thêm nước sốt không?',
         ],
         preferenceData: [
             [
@@ -448,13 +448,13 @@ export const menuDetailedData = [
         meal: 'Big Mac',
         price: 50.8,
         image: 'https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png',
-        details: 'McFeast features two 100% fresh beef burger patties that are hot',
+        details: 'McFeast giới thiệu 2 miếng burger bò tươi 100% nóng hổi',
         preferenceTitle: [
-            'Choose your 2 dips',
-            'Choose your 1st drink flavour',
-            'Choose your 2nd drink flavour',
-            'Would you like to add a side?',
-            'Would you Like any extra sauce?',
+            'Chọn 2 món ăn của bạn',
+            'Chọn đồ uống đầu tiên của bạn',
+            'Chọn đồ uống thứ hai của bạn',
+            'Bạn có muốn thêm gia vị không?',
+            'Bạn có muốn thêm nước sốt không?',
         ],
         preferenceData: [
             [
@@ -515,14 +515,14 @@ export const menuDetailedData = [
         meal: 'Hand cut chips',
         price: 29.3,
         image: 'https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png',
-        details: 'Two 100% fresh beef burger patties that are hot,deliciously',
+        details: 'Hai miếng burger bò tươi 100% nóng hổi, thơm ngon',
 
         preferenceTitle: [
-            'Choose your 2 dips',
-            'Choose your 1st drink flavour',
-            'Choose your 2nd drink flavour',
-            'Would you like to add a side?',
-            'Would you Like any extra sauce?',
+            'Chọn 2 món ăn của bạn',
+            'Chọn đồ uống đầu tiên của bạn',
+            'Chọn đồ uống thứ hai của bạn',
+            'Bạn có muốn thêm gia vị không?',
+            'Bạn có muốn thêm nước sốt không?',
         ],
 
         preferenceData: [
@@ -584,13 +584,13 @@ export const menuDetailedData = [
         meal: 'Big Mac',
         price: 70.2,
         image: 'https://bukasapics.s3.us-east-2.amazonaws.com/plate1.png',
-        details: 'McFeast features two 100% fresh beef burger patties that are hot',
+        details: 'McFeast giới thiệu 2 miếng burger bò tươi 100% nóng hổi',
         preferenceTitle: [
-            'Choose your 2 dips',
-            'Choose your 1st drink flavour',
-            'Choose your 2nd drink flavour',
-            'Would you like to add a side?',
-            'Would you Like any extra sauce?',
+            'Chọn 2 món ăn của bạn',
+            'Chọn đồ uống đầu tiên của bạn',
+            'Chọn đồ uống thứ hai của bạn',
+            'Bạn có muốn thêm gia vị không?',
+            'Bạn có muốn thêm nước sốt không?',
         ],
         preferenceData: [
             [

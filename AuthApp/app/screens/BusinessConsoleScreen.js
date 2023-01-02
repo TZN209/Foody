@@ -5,7 +5,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function BusinessConsoleScreen() {
     return (
         <View style={styles.container}>
-            <Text>Welcome to Business console</Text>
+            <Text>Xin chào</Text>
         </View>
     );
 }

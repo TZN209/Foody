@@ -70,7 +70,7 @@ export default function HomeScreen({ navigation }) {
                         <View style={{ flexDirection: 'row', alignItems: 'center', paddingLeft: 10 }}>
                             <Icon type="material-community" name="map-marker" color={colors.grey1} size={26} />
 
-                            <Text style={{ marginLeft: 5 }}>22 Beessie Street</Text>
+                            <Text style={{ marginLeft: 5 }}>22 Giải Phóng</Text>
                         </View>
 
                         <View style={styles.clockView}>
@@ -87,7 +87,7 @@ export default function HomeScreen({ navigation }) {
 
                 {/* Categories */}
                 <View style={styles.headerTextView}>
-                    <Text style={styles.headerText}>Categories</Text>
+                    <Text style={styles.headerText}>Danh mục</Text>
                 </View>
 
                 <View>
@@ -131,7 +131,7 @@ export default function HomeScreen({ navigation }) {
 
                 {/* Free Delivery now */}
                 <View style={styles.headerTextView}>
-                    <Text style={styles.headerText}>Free Delivery now</Text>
+                    <Text style={styles.headerText}>Miễn phí giao hàng</Text>
                 </View>
 
                 <View>
@@ -173,7 +173,7 @@ export default function HomeScreen({ navigation }) {
 
                 {/* Promotions available */}
                 <View style={styles.headerTextView}>
-                    <Text style={styles.headerText}>Promotions available</Text>
+                    <Text style={styles.headerText}>Khuyến mãi có sẵn</Text>
                 </View>
 
                 <View>
@@ -201,7 +201,7 @@ export default function HomeScreen({ navigation }) {
 
                 {/* Restaurants in your Area */}
                 <View style={styles.headerTextView}>
-                    <Text style={styles.headerText}>Restaurants in your Area</Text>
+                    <Text style={styles.headerText}>Nhà hàng gần đây</Text>
                 </View>
 
                 <View style={{ width: SCREEN_WIDTH, paddingTop: 10 }}>

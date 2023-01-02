@@ -31,7 +31,7 @@ export default function DrawerContent(props) {
                                 <Text style={{ fontWeight: 'bold', color: colors.cardbackground, fontSize: 18 }}>
                                     1
                                 </Text>
-                                <Text style={{ color: colors.cardbackground, fontSize: 14 }}>My Favorites</Text>
+                                <Text style={{ color: colors.cardbackground, fontSize: 14 }}>Yêu thích</Text>
                             </View>
                         </View>
                         <View style={{ flexDirection: 'row', marginTop: 10 }}>
@@ -39,7 +39,7 @@ export default function DrawerContent(props) {
                                 <Text style={{ fontWeight: 'bold', color: colors.cardbackground, fontSize: 18 }}>
                                     0
                                 </Text>
-                                <Text style={{ color: colors.cardbackground, fontSize: 14 }}>My Cart</Text>
+                                <Text style={{ color: colors.cardbackground, fontSize: 14 }}>Giỏ hàng</Text>
                             </View>
                         </View>
                     </View>
@@ -49,28 +49,28 @@ export default function DrawerContent(props) {
                 <DrawerItemList {...props} />
 
                 <DrawerItem
-                    label="Payment"
+                    label="Thanh toán"
                     icon={({ color, size }) => (
                         <Icon type="material-community" name="credit-card-outline" color={color} size={size} />
                     )}
                 />
 
                 <DrawerItem
-                    label="Promotions"
+                    label="Khuyến mãi"
                     icon={({ color, size }) => (
                         <Icon type="material-community" name="tag-heart" color={color} size={size} />
                     )}
                 />
 
                 <DrawerItem
-                    label="Settings"
+                    label="Cài đặt"
                     icon={({ color, size }) => (
                         <Icon type="material-community" name="cog-outline" color={color} size={size} />
                     )}
                 />
 
                 <DrawerItem
-                    label="Help"
+                    label="Trợ giúp"
                     icon={({ color, size }) => (
                         <Icon type="material-community" name="lifebuoy" color={color} size={size} />
                     )}
@@ -78,9 +78,9 @@ export default function DrawerContent(props) {
 
                 {/* Dark Mode */}
                 <View style={{ borderTopWidth: 1, borderTopColor: colors.grey5 }}>
-                    <Text style={styles.preferences}>Preferences</Text>
+                    <Text style={styles.preferences}>Sở thích</Text>
                     <View style={styles.switchText}>
-                        <Text style={styles.darkthemeText}>Dark Theme</Text>
+                        <Text style={styles.darkthemeText}>Chế độ tối</Text>
                         <View style={{ paddingRight: 10 }}>
                             <Switch trackColor={{ false: '#767577', true: '#81b0ff' }} thumbColor="#f4f3f4" />
                         </View>
@@ -90,7 +90,7 @@ export default function DrawerContent(props) {
 
             {/* Sign Out */}
             <DrawerItem
-                label="Sign Out"
+                label="Đăng xuất"
                 icon={({ color, size }) => (
                     <Icon type="material-community" name="logout-variant" color={color} size={size} />
                 )}

@@ -27,13 +27,13 @@ const MenuProductScreen = ({ navigation, route }) => {
     const renderScene = ({ route }) => {
         switch (route.key) {
             case 1:
-                return <Route1 name={navigation} />;
+                return <Route1 navigation={navigation} />;
             case 2:
-                return <Route2 name={navigation} />;
+                return <Route1 navigation={navigation} />;
             case 3:
-                return <Route3 name={navigation} />;
+                return <Route1 navigation={navigation} />;
             case 4:
-                return <Route4 name={navigation} />;
+                return <Route1 navigation={navigation} />;
             case 5:
                 return <Route5 name={navigation} />;
             case 6:
@@ -59,7 +59,7 @@ const MenuProductScreen = ({ navigation, route }) => {
                     size={25}
                     onPress={() => navigation.goBack()}
                 />
-                <Text style={styles.text1}>Menu</Text>
+                <Text style={styles.text1}>Thực đơn</Text>
             </View>
 
             {/* TabView */}

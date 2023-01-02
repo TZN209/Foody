@@ -12,6 +12,7 @@ import SearchResultScreen from './SearchResultScreen';
 import MenuProductScreen from './MenuProductScreen';
 import RestaurantHomeScreen from './RestaurantHomeScreen';
 import MenuScreen from './MenuScreen';
+import PreferenceScreen from './PreferenceScreen';
 
 export {
     ForgetPassword,
@@ -28,4 +29,5 @@ export {
     MenuProductScreen,
     RestaurantHomeScreen,
     MenuScreen,
+    PreferenceScreen,
 };

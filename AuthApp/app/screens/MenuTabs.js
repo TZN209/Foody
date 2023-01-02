@@ -4,7 +4,7 @@ import { MenuCard } from '../components';
 import { menuData, menuDetailedData } from '../global/Data';
 
 // Screen List
-export function Route1() {
+export function Route1({ navigation }) {
     return (
         <View style={{ flex: 1 }}>
             <View style={styles.view2}>
@@ -13,7 +13,11 @@ export function Route1() {
                     data={menuDetailedData}
                     keyExtractor={(item, index) => index.toString()}
                     renderItem={({ item, index }) => (
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => {
+                                navigation.navigate('PreferenceScreen', { index });
+                            }}
+                        >
                             <MenuCard
                                 productName={item.meal}
                                 image={item.image}

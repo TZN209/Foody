@@ -21,7 +21,7 @@ export default function RootClientTabs() {
                 component={HomeScreen}
                 options={{
                     headerShown: false,
-                    tabBarLabel: 'Home',
+                    tabBarLabel: 'Trang chủ',
                     tabBarIcon: ({ color, size }) => <Icon name="home" type="material" color={color} size={size} />,
                 }}
             />
@@ -31,7 +31,7 @@ export default function RootClientTabs() {
                 component={ClientStack}
                 options={{
                     headerShown: false,
-                    tabBarLabel: 'Search',
+                    tabBarLabel: 'Tìm kiếm',
                     tabBarIcon: ({ color, size }) => <Icon name="search" type="material" color={color} size={size} />,
                 }}
             />
@@ -41,7 +41,7 @@ export default function RootClientTabs() {
                 component={MyOrdersScreen}
                 options={{
                     headerShown: false,
-                    tabBarLabel: 'My Orders',
+                    tabBarLabel: 'Đơn hàng',
                     tabBarIcon: ({ color, size }) => (
                         <Icon name="view-list" type="material" color={color} size={size} />
                     ),
@@ -53,7 +53,7 @@ export default function RootClientTabs() {
                 component={MyAccountScreen}
                 options={{
                     headerShown: false,
-                    tabBarLabel: 'My Account',
+                    tabBarLabel: 'Tài khoản',
                     tabBarIcon: ({ color, size }) => <Icon name="person" type="material" color={color} size={size} />,
                 }}
             />
