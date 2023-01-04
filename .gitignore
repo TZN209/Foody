@@ -1,8 +1,8 @@
-/.vscode
+# /.vscode
 /AuthApp/node_modules
-AuthApp/__tests__
-AuthApp/.bundle
-AuthApp/android
+# AuthApp/__tests__
+# AuthApp/.bundle
+# AuthApp/android
 AuthApp/ios
 
 /backend/node_modules
